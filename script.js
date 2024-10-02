@@ -15,5 +15,20 @@ function getHumanChoice() {
     return humanChoice.toLowerCase();
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+
+    if (humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "paper" && computerChoice == "rock" || humanChoice == "scissors" && computerChoice == "paper") {
+        alert("You Win!");
+        humanScore++;
+    } else if (humanChoice == computerChoice) {
+        alert("It's a tie!");
+    } else {
+        alert("You lose!");
+        computerScore++;
+    }
+}
+
+playRound(getHumanChoice, getComputerChoice);
