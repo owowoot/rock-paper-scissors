@@ -11,25 +11,6 @@ function getComputerChoice() {
     };
 };
 
-// function getHumanChoice() {
-//     let humanChoice = prompt("choose rock, paper, or scissors");
-//     return humanChoice.toLowerCase();
-// }
-
-
-// function playGame() {
-//     for (let i = 0; i < 5; i++) {
-//         playRound(getHumanChoice());
-//     }
-//     if (computerScore > playerScore) {
-//         console.log("You lost the game")
-//     } else if (computerScore === playerScore) {
-//         console.log("It's a tie!")
-//     } else {
-//         console.log("You win the game!")
-//     };
-// }
-
 function playRound(playerChoice) {
     let computerChoice = getComputerChoice();
     let result = ''
