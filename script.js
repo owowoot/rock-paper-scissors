@@ -1,13 +1,16 @@
+// const rockButton = document.getElementById("rock-button");
+// rockButton.addEventListener('click', function playRound() {
+// });
+
 function getComputerChoice() {
     let choice = [Math.floor(Math.random() * 3)];
     if (choice == 0) {
-        choice = "rock";
+        return "rock";
     } else if (choice == 1) {
-        choice = "paper";
+        return "paper";
     } else {
-        choice = "scissors";
+        return "scissors";
     };
-    return choice
 };
 
 function getHumanChoice() {
