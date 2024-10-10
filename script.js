@@ -5,9 +5,9 @@ let playerScore = 0;
 let computerScore = 0;
 function getComputerChoice() {
     let choice = [Math.floor(Math.random() * 3)];
-    if (choice == 0) {
+    if (choice === 0) {
         return "rock";
-    } else if (choice == 1) {
+    } else if (choice === 1) {
         return "paper";
     } else {
         return "scissors";
@@ -20,32 +20,32 @@ function getHumanChoice() {
 }
 
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice());
-    }
-    if (computerScore > playerScore) {
-        console.log("You lost the game")
-    } else if (computerScore === playerScore) {
-        console.log("It's a tie!")
-    } else {
-        console.log("You win the game!")
-    };
-}
+// function playGame() {
+//     for (let i = 0; i < 5; i++) {
+//         playRound(getHumanChoice());
+//     }
+//     if (computerScore > playerScore) {
+//         console.log("You lost the game")
+//     } else if (computerScore === playerScore) {
+//         console.log("It's a tie!")
+//     } else {
+//         console.log("You win the game!")
+//     };
+// }
 
-function playRound(humanChoice) {
+function playRound(playerChoice) {
     let computerChoice = getComputerChoice();
-    if (humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "paper" && computerChoice == "rock" || humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You Win!");
+    let result = ''
+    if (playerChoice == "rock" && computerChoice == "scissors" || playerChoice == "paper" && computerChoice == "rock" || playerChoice == "scissors" && computerChoice == "paper") {
+        result = "You Win!";
         playerScore++;
-    } else if (humanChoice == computerChoice) {
-        console.log("It's a tie!");
+    } else if (playerChoice == computerChoice) {
+        result = "It's a tie!";
     } else {
-        console.log("You lose!");
+        result = "You lose!";
         computerScore++;
     };
-    return computerScore;
-    return playerScore;
+    document.getElementById('result').textContent = result;
 }
 
 playGame();
