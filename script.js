@@ -1,6 +1,3 @@
-// const rockButton = document.getElementById("rock-button");
-// rockButton.addEventListener('click', function playRound() {
-// });
 let playerScore = 0;
 let computerScore = 0;
 function getComputerChoice() {
@@ -14,10 +11,10 @@ function getComputerChoice() {
     };
 };
 
-function getHumanChoice() {
-    let humanChoice = prompt("choose rock, paper, or scissors");
-    return humanChoice.toLowerCase();
-}
+// function getHumanChoice() {
+//     let humanChoice = prompt("choose rock, paper, or scissors");
+//     return humanChoice.toLowerCase();
+// }
 
 
 // function playGame() {
@@ -50,4 +47,12 @@ function playRound(playerChoice) {
     document.getElementById('computerScore').textContent = computerScore;
 }
 
-playGame();
+document.getElementById('rock-button').addEventListener('click', function () {
+    playRound('rock');
+});
+document.getElementById('paper-button').addEventListener('click', function () {
+    playRound('paper');
+});
+document.getElementById('scissors-button').addEventListener('click', function () {
+    playRound('scissors');
+});
