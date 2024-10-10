@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#scoreBoard {
+    margin: 20px 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#scoreBoard p {
+    margin: 5px 0;
+    text-align: center;
+}
