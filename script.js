@@ -46,6 +46,8 @@ function playRound(playerChoice) {
         computerScore++;
     };
     document.getElementById('result').textContent = result;
+    document.getElementById('playerScore').textContent = playerScore;
+    document.getElementById('computerScore').textContent = computerScore;
 }
 
 playGame();
