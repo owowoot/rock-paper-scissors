@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <button id="rock-button">rock</button>
-        <button id="paper-button">paper</button>
-        <button id="scissors-button">scissors</button>
+    <div class="container">
+        <div class="buttons">
+            <button id="rock-button">rock</button>
+            <button id="paper-button">paper</button>
+            <button id="scissors-button">scissors</button>
+        </div>
+        <div id="result"></div>
+        <div id="scoreBoard">
+            <p>Player Score: <span id="playerScore">0</span></p>
+            <p>Computer Score: <span id="computerScore">0</span></p>
+        </div>
+        <script src="script.js"></script>
     </div>
-    <div id="result"></div>
-    <div id="scoreBoard">
-        <p>Player Score: <span id="playerScore">0</span></p>
-        <p>Computer Score: <span id="computerScore">0</span></p>
-    </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
