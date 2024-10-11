@@ -14,7 +14,8 @@ function getComputerChoice() {
 function playRound(playerChoice) {
     let computerChoice = getComputerChoice();
     let result = ''
-    if (playerChoice == "rock" && computerChoice == "scissors" || playerChoice == "paper" && computerChoice == "rock" || playerChoice == "scissors" && computerChoice == "paper") {
+    if (playerChoice == "rock" && computerChoice == "scissors" || playerChoice == "paper" && computerChoice == "rock" ||
+        playerChoice == "scissors" && computerChoice == "paper") {
         result = "You Win!";
         playerScore++;
     } else if (playerChoice == computerChoice) {
